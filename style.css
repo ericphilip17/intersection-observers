@@ -1,0 +1,72 @@
+:root {
+    --var-color-one: #a7812b;
+    --var-color-two: #161616;
+}
+@font-face {
+    font-family: harmond;
+    src: url(./fonts/Harmond-SemiBoldCondensed.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    list-style: none;
+    font-family: harmond, 'sans-serif';
+    color: var(--var-color-two);
+
+}
+
+html, body {
+    background-color: var(--var-color-one);
+    height: 2000px;
+}
+
+h1 {
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    text-align: center;
+    font-size: 6rem;
+    letter-spacing: 2px;
+
+}
+ul {
+    position: absolute;
+    right: 5%;
+    top: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+ul li {
+    height: 4rem;
+    display: flex;
+    overflow: hidden;
+    /* background-color: #161616; */
+    margin-bottom: 0.5rem;
+    justify-content: flex-end;
+}
+
+ul li span {
+    display: block;
+    line-height: 4rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    /* background-color: #161616; */
+    transform: translateY(200%);
+    margin: 0.05rem;
+
+}
+
+ul li span.active {
+    transform: translateY(0%);
+    transition: 1s ease-out;
+
+}
+
+ul li:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
